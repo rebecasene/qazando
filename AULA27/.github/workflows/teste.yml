@@ -1,14 +1,16 @@
 name: Regressivo Qazando
-on: 
-    pull_request:
-        branches: [main]
+
+on:
+  pull_request:
+    branches: [main]
+
 jobs:
-    cypress-run:
-        runs-on: ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-latest
 
-    steps: 
-        - name: Clonar o projeto
-          uses: actions/checkout@v6
+    steps:
+      - name: Clonar o projeto
+        uses: actions/checkout@v4
 
-        - name: Cypress runs-on
-          uses: cypress-io/github-action@v7
+      - name: Cypress run
+        uses: cypress-io/github-action@v7
